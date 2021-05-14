@@ -1,0 +1,16 @@
+.JFXButton {
+    -fx-alignment: center-left;
+    -fx-border-color:  #ffffff;
+    -fx-border-radius:  5;
+    -fx-border-width: 3;
+    -fx-background-color:  #6b4e00;
+}
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+}

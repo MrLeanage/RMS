@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="baseAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.appHome.AppStageController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1000.0" style="-fx-background-color: #2e0000;" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="218.0" layoutY="98.0" prefHeight="38.0" prefWidth="782.0" text="Restaurant Management System" textFill="WHITE" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Calibri Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" layoutX="814.0" layoutY="27.0" prefHeight="22.0" prefWidth="446.0" text="USER" textFill="WHITE" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20.0" />
+               </graphic>
+            </Label>
+            <MenuButton alignment="CENTER" layoutX="871.0" layoutY="14.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #2e0000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Account" textFill="WHITE" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#logoutAccount" text="LOGOUT           " />
+              </items>
+            </MenuButton>
+            <Label layoutX="213.0" layoutY="27.0" prefHeight="89.0" prefWidth="463.0" text="BURGER HUT" textFill="#f9b83a" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="324.0">
+               <font>
+                  <Font name="Calibri Bold" size="67.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="152.0" fitWidth="147.0" layoutX="129.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../lib/images/favicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="550.0" prefWidth="250.0" style="-fx-background-color: #2e0000;" stylesheets="@../../lib/css/system.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <VBox layoutX="43.0" layoutY="55.0" prefHeight="530.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="CENTER" onAction="#loadHomeDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" styleClass="JFXButton" text="HOME" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="menuButton" alignment="CENTER" onAction="#loadMenuDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5; -fx-border-width: 3; -fx-background-color: #2e0000;" styleClass="JFXButton" text="MENU MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="orderButton" alignment="CENTER" onAction="#loadOrderDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5; -fx-border-width: 3; -fx-background-color: #2e0000;" styleClass="JFXButton" text="ORDER MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="employeeButton" alignment="CENTER" onAction="#loadEmployeeDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5; -fx-border-width: 3; -fx-background-color: #2e0000;" styleClass="JFXButton" text="EMPLOYEE MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="userButton" alignment="CENTER" onAction="#loadUserDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5; -fx-border-width: 3; -fx-background-color: #2e0000;" styleClass="JFXButton" text="USER MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <ImageView fitHeight="237.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../lib/images/logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="detailAnchorPane" prefHeight="550.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="540.0" layoutX="65.0" layoutY="58.0" stroke="#573e00" strokeType="INSIDE" strokeWidth="3.0" width="740.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

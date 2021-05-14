@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="550.0" prefWidth="750.0" stylesheets="@../../lib/css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.menuManagement.MenuDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="540.0" layoutX="65.0" layoutY="58.0" stroke="#573e00" strokeType="INSIDE" strokeWidth="3.0" width="740.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="43.0" layoutY="38.0" text="MENU MANAGEMENT" textFill="#2e0000" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="menuTable" layoutX="30.0" layoutY="95.0" onMouseClicked="#setSelectedMenuDataToFields" prefHeight="235.0" prefWidth="690.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="95.0">
+         <columns>
+            <TableColumn fx:id="IDColumn" prefWidth="54.0" text="Menu ID" />
+            <TableColumn fx:id="imageColumn" minWidth="80.0" text="Menu " />
+            <TableColumn fx:id="nameColumn" prefWidth="139.0" text="Menu Name" />
+            <TableColumn fx:id="infoColumn" prefWidth="191.0" text="Menu Info " />
+            <TableColumn fx:id="priceColumn" prefWidth="109.0" text="Price " />
+            <TableColumn fx:id="availabilityColumn" text="Availability" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchTextField" layoutX="30.0" layoutY="65.0" prefHeight="25.0" prefWidth="690.0" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="65.0" />
+      <FontAwesomeIconView fill="#573e00" glyphName="SEARCH" layoutX="702.0" layoutY="82.0" />
+      <HBox alignment="CENTER_RIGHT" layoutX="502.0" layoutY="485.0" prefHeight="34.0" prefWidth="223.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="502.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="500.0">
+         <children>
+            <JFXButton onAction="#deleteMenu" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #a70000;" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#clearFields" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #573e00;" text="CLEAR FIELDS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label layoutX="30.0" layoutY="338.0" text="Menu Name :" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="648.0" AnchorPane.topAnchor="338.0" />
+      <TextField fx:id="nameTextField" layoutX="170.0" layoutY="338.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="338.0" />
+      <Label fx:id="nameLabel" layoutX="30.0" layoutY="364.0" prefHeight="17.0" prefWidth="340.0" textFill="RED" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="364.0" />
+      <Label layoutX="380.0" layoutY="338.0" text="Menu Info :" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="338.0" />
+      <Label fx:id="infoLabel" layoutX="380.0" layoutY="411.0" prefHeight="17.0" prefWidth="340.0" textFill="RED" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="411.0" />
+      <Label layoutX="30.0" layoutY="383.0" text="Price :" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="383.0" />
+      <TextField fx:id="priceTextField" layoutX="170.0" layoutY="383.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="383.0" />
+      <Label fx:id="priceLabel" layoutX="30.0" layoutY="409.0" prefHeight="17.0" prefWidth="340.0" textFill="RED" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="409.0" />
+      <Label layoutX="30.0" layoutY="428.0" text="Availability :" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="428.0" />
+      <Label layoutX="379.0" layoutY="428.0" text="Image :" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="428.0" />
+      <ImageView fx:id="menuImageView" fitHeight="58.0" fitWidth="64.0" layoutX="520.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="428.0" />
+      <TextArea fx:id="infoTextArea" layoutX="466.0" layoutY="337.0" prefHeight="71.0" prefWidth="200.0" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="337.0" />
+      <Button layoutX="629.0" layoutY="441.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="25.0" prefWidth="130.0" text="Browse Image" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="428.0" />
+      <ChoiceBox fx:id="availabilityChoiceBox" layoutX="170.0" layoutY="424.0" prefWidth="200.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="428.0" />
+      <JFXButton fx:id="updateButton" layoutX="275.0" layoutY="485.0" onAction="#updateMenu" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #217500;" text="UPDATE" textFill="WHITE" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="502.0">
+         <font>
+            <Font name="Calibri Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="addButton" layoutX="275.0" layoutY="485.0" onAction="#addMenu" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffef00;" text="ADD" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="502.0">
+         <font>
+            <Font name="Calibri Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="menuImageLabel" layoutX="390.0" layoutY="459.0" prefHeight="17.0" prefWidth="130.0" textFill="RED" AnchorPane.rightAnchor="30.0" />
+   </children>
+</AnchorPane>

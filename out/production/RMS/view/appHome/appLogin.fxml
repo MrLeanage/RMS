@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="baseAnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #e4e4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.appHome.AppLoginController">
+   <children>
+      <AnchorPane prefHeight="300.0" prefWidth="1000.0" style="-fx-background-color: #2e0000;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="301.0" fitWidth="871.0" layoutX="71.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="77.2568359375" AnchorPane.rightAnchor="80.0">
+         <image>
+            <Image url="@../../lib/images/cover.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="301.0" fitWidth="871.0" layoutX="77.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="77.2568359375" AnchorPane.rightAnchor="81.7431640625" AnchorPane.topAnchor="343.0">
+         <image>
+            <Image url="@../../lib/images/cover.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="275.0" layoutY="125.0" prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="125.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="440.0" stroke="#6b4e00" strokeType="INSIDE" strokeWidth="3.0" width="440.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Circle fill="#2e0000" layoutX="225.0" layoutY="137.0" radius="83.0" stroke="#2e0000" strokeType="INSIDE" />
+            <TextField fx:id="emailTextField" layoutX="57.0" layoutY="268.0" prefHeight="35.0" prefWidth="320.0" promptText="Enter Email " AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" />
+            <PasswordField fx:id="passwordTextField" layoutX="65.0" layoutY="309.0" prefHeight="35.0" prefWidth="320.0" promptText="Enter Password" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" />
+            <Label fx:id="validationLabel" alignment="CENTER" layoutX="65.0" layoutY="348.0" prefHeight="17.0" prefWidth="320.0" textFill="RED" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" />
+            <JFXButton layoutX="66.0" layoutY="370.0" onAction="#login" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #2e0000;" text="LOGIN" textFill="WHITE" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="234.0" AnchorPane.topAnchor="370.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="234.0" layoutY="373.0" onAction="#clearFields" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #e4e4e4; -fx-border-color: #a4a4a4; -fx-border-width: 1;" text="CLEAR" textFill="#573e00" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="370.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="157.0" fitWidth="171.0" layoutX="146.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../lib/images/favicon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="221.0" prefHeight="38.0" prefWidth="320.0" text="Restaurant Management System" textFill="#2e0000">
+               <font>
+                  <Font name="Calibri Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

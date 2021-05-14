@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="540.0" layoutX="65.0" layoutY="58.0" stroke="#573e00" strokeType="INSIDE" strokeWidth="3.0" width="740.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label alignment="CENTER" layoutX="186.0" layoutY="150.0" prefHeight="87.0" prefWidth="740.0" text="BURGER HUT" textFill="#2e0000" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Calibri Bold" size="67.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="272.0" fitWidth="718.0" layoutX="16.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="17.95599365234375" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="275.0">
+         <image>
+            <Image url="@../../lib/images/cover.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="206.0" prefHeight="63.0" prefWidth="740.0" text="- S I N C E    1 9 9 8 -  " textFill="#2e0000" AnchorPane.leftAnchor="5.0">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
